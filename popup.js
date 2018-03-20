@@ -27,7 +27,7 @@ function priceFetch(err,data) {
 		var coinObject = [];
 		var j = data;
 		for(i=0; i<j.length; i++) {
-			if(j[i].id == "bitcoin" || j[i].id == "ethereum" || j[i].id == "atc-coin" || j[i].id == "litecoin" || j[i].id == "ripple" ){
+			if(j[i].id == "bitcoin" || j[i].id == "ethereum" || j[i].id == "bitcoin-cash" || j[i].id == "litecoin" || j[i].id == "ripple" ){
 			let obj = {};
 			obj.name = j[i].name;
 			obj.rank = j[i].rank;
