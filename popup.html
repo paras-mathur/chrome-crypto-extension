@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Price Tracker</title>
+	<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="materialize.min.css">
+	<link rel="stylesheet" href="loading.css">
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<script src="jquery-3.2.1.min.js"></script>
+	<style>
+		:root {
+		  --main-color: #3490de;
+		}
+		body{
+			min-width: 250px;
+			min-height: 350px;
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+		}
+		h5 {
+			background-color: var(--main-color);
+		    margin: 0px;
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+			color: white;
+			font-weight: bold;
+			font-size: 16px;
+		    text-align: left;
+		    padding: 9px;
+		}
+		h6 {
+			background-color: var(--main-color);
+		    margin: 0px;
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+			color: white;
+			font-weight: bold;
+			font-size: 16px;
+		    text-align: left;
+		    padding: 9px;
+		}
+		#footer {
+			cursor: pointer;
+		}
+		#footer:hover{
+			background-color: #5f95c3;
+		}
+		.price-green{
+			color: green;
+		}		
+		.price-red{
+			color:red;
+			margin-bottom: 0px;
+		}
+		.coin{
+			margin-bottom:0px;
+		}
+		.cell{
+			text-align:center;
+		}
+		td{
+			width: 100px;
+			padding-top: 5px;
+			padding-bottom: 5px;
+			text-align:center;
+			vertical-align: baseline;
+		}
+		th{
+			padding: 5px;
+			font-size-adjust: inherit;
+		}
+		.settings{
+			position: absolute;
+		    background: white;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 2;
+		    display: none;
+		}
+		.settings-dropdown{
+			max-width: max-content;
+			float: right;
+		}
+		.setting-form{
+			margin: 10px;
+		}
+		label {
+			font-size: 1.6rem;
+			color:#8c8989;
+		}
+		.price-cell {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="settings">
+		<h5 class="center">Settings <span class="glyphicon glyphicon-remove-circle right"></span></h5>
+
+	
+		<div class="form-group setting-form">
+			<div class="row">	
+				<label for="sel1">Currency:</label>
+				<select class="form-control settings-dropdown" id="sel1">
+				</select>
+			</div>
+		</div>
+
+	</div>
+	<h5 class="center bold">Crypto Price Tracker <span class="glyphicon glyphicon-wrench right"></span></h5>
+	 <!--Loading code STARTS here -->
+	<div class="loading" id="loading">
+		<div class="container">
+		  <div class="dot dot-1"></div>
+		  <div class="dot dot-2"></div>
+		  <div class="dot dot-3"></div>
+		</div>
+
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		  <defs>
+		    <filter id="goo">
+		      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+		      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -7"/>
+		    </filter>
+		  </defs>
+		</svg>
+	</div>
+	 <!--Loading code ENDS here -->
+<table id="priceTable" class="centered bordered">
+<thead>
+<tr>
+<th>Coin</th>
+<th>Price(USD)</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+<div id="footer">
+	<h6 class="center">	Buy/Sell Instantly	</h6>
+</div>
+<script src="popup.js"></script>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-108803792-1']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = 'https://ssl.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+</body>
+</html>
